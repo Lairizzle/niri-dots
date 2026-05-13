@@ -1,0 +1,59 @@
+# ~/.config/swaylock/config
+# Midnight Crystal theme
+
+# --- Screenshot + Effects ---
+screenshots
+effect-blur=7x5
+effect-greyscale
+effect-vignette=0.4:0.6
+
+# --- Clock & Indicator ---
+clock
+timestr=%H:%M
+datestr=%A, %B %e
+indicator
+indicator-radius=120
+indicator-thickness=10
+indicator-caps-lock
+
+# --- Ring ---
+ring-color=2AC3DE
+ring-ver-color=a6e3a1
+ring-wrong-color=ff5555
+ring-clear-color=CBA6F7
+
+# --- Key highlights ---
+key-hl-color=FFFFFF
+bs-hl-color=ff5555
+
+# --- Separator ---
+separator-color=00000000
+
+# --- Lines ---
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000
+
+# --- Inside fill ---
+inside-color=271224CC
+inside-ver-color=0d2a1eCC
+inside-wrong-color=2a0d0dCC
+inside-clear-color=1a0d2aCC
+
+# --- Text ---
+text-color=c0caf5
+text-ver-color=a6e3a1
+text-wrong-color=ff5555
+text-clear-color=CBA6F7
+text-caps-lock-color=FAB387
+
+# --- Font ---
+font=monospace
+font-size=20
+
+# --- Behavior ---
+show-failed-attempts
+ignore-empty-password
+fade-in=0.2
+grace=2
