@@ -1,0 +1,47 @@
+// Input device configuration
+// https://niri-wm.github.io/niri/Configuration:-Input
+
+input {
+    keyboard {
+        xkb {
+            // layout "us,ru"
+            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            // If empty, niri fetches settings from org.freedesktop.locale1
+            // (controlled via localectl set-x11-keymap)
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        // dwt
+        // dwtp
+        // drag false
+        // drag-lock
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "two-finger"
+        // disabled-on-external-mouse
+    }
+
+    mouse {
+        accel-profile "flat"
+        // natural-scroll
+        // accel-speed 0.2
+        // scroll-method "no-scroll"
+    }
+
+    trackpoint {
+        // natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "on-button-down"
+        // scroll-button 273
+        // scroll-button-lock
+        // middle-emulation
+    }
+
+    // warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="0%"
+}

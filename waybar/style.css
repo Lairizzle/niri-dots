@@ -1,0 +1,141 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+/* =========================
+   MAIN BAR
+========================= */
+
+window#waybar {
+  background: rgba(39, 18, 36, 0.6);
+  color: #C0CAF5;
+  border-style: solid;
+  border-color: #BB9AF7;
+  border-width: 0 0 0 0;
+  padding: 0 8px;
+}
+
+/* =========================
+   MODULE CONTAINERS
+   IMPORTANT: keep these neutral
+========================= */
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0;
+  padding: 0;
+}
+
+/* ensures visual breathing room without breaking layout math */
+#waybar > box {
+  padding: 0 6px;
+}
+
+/* =========================
+   MODULE BASE STYLE
+========================= */
+
+#custom-power,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+  padding: 0 10px;
+  border-radius: 0px;
+}
+
+/* =========================
+   HOVER STATES
+========================= */
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover {
+  color: #C0CAF5;
+}
+
+/* =========================
+   WORKSPACES
+========================= */
+
+#workspaces button {
+  background: transparent;
+  color: #C0CAF5;
+
+  border: none;
+  padding: 0 8px;
+  margin: 0 1px;
+
+  border-radius: 0px;
+}
+
+#workspaces button.active {
+  background: rgba(73, 57, 97, 0.9);
+  color: #7DCFFF;
+}
+
+#workspaces button:hover {
+  background: rgba(73, 57, 97, 0.9);
+  color: #7DCFFF;
+}
+
+/* =========================
+   ARCH ICON
+========================= */
+
+#custom-arch {
+  padding: 0 10px;
+  transition: color 0.3s ease;
+}
+
+#custom-arch:hover {
+  color: #7DCFFF;
+}
+
+/* =========================
+   TRAY MENU
+========================= */
+
+#tray menu {
+  background-color: rgba(39, 18, 36, 0.9);
+  border: 1px solid #BB9AF7;
+  border-radius: 0px;
+  color: #C0CAF5;
+}
+
+#tray menu *:hover {
+  background-color: #493961;
+  border-radius: 0px;
+}

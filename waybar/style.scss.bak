@@ -1,0 +1,166 @@
+// ========================
+// Colors (Global Variables)
+// ========================
+$background       : #271224; // Main dark
+$background-alt   : #291E37; // Slightly lighter
+
+$foreground       : #C0CAF5; // Main text
+$foreground-dim   : #9A8FEF; // Muted text / secondary
+
+$accent-primary   : #7DCFFF; // Bright cyan
+$accent-secondary : #493961; // Purple accent
+$accent-muted     : #3D355F; // Dark muted purple
+
+$purple-dark      : #BB9AF7; // Keywords
+$indigo-shadow    : #3D355F;
+$plum-black       : #3B2A46; 
+$deep-maroon      : #361B30;
+
+// ========================
+// Global Font & Transitions
+// ========================
+* {
+  font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  transition: background-color .3s ease-out, color .3s ease-out, border-radius .3s ease;
+}
+
+// ========================
+// Main Waybar container (transparent)
+// ========================
+window#waybar {
+  background: transparent; // DO NOT paint the entire bar
+  color: $foreground;
+  font-family: "SpaceMono Nerd Font", feather;
+  transition: color .3s, border-radius .3s ease;
+  border-radius: 0px;
+  padding: 2px 5px;
+}
+
+// ========================
+// Modules containers
+// ========================
+.modules-left,
+.modules-center,
+.modules-right {
+  background: rgba($background-alt, 0.6); // semi-transparent per-module
+  border: 2px solid rgba($accent-primary, 0.4);
+  border-radius: 6px;
+  margin: 0 5px;
+}
+
+.modules-left {
+  padding: 0 5px;
+}
+
+.modules-center {
+  padding: 0 10px;
+}
+
+// ========================
+// Module items
+// ========================
+#custom-power,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+  padding: 0 10px;
+  border-radius: 6px;
+}
+
+// Hover effect for modules
+#custom-power:hover,
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover {
+  background: rgba($accent-secondary, 0.9);
+  color: $foreground;
+}
+
+// ========================
+// Workspaces
+// ========================
+#workspaces button {
+  background: transparent;
+  font-family: "SpaceMono Nerd Font", feather;
+  font-weight: 400;
+  color: $foreground;
+  border: none;
+  padding: 0 8px;
+  margin: 0 1px 1px;
+  border-radius: 6px;
+}
+
+#workspaces button.active {
+  background: rgba($accent-secondary, 0.9);
+  color: $accent-primary;
+}
+
+#workspaces button:hover {
+  background: rgba($accent-secondary, 0.9);
+  color: $accent-primary;
+  box-shadow: 0 0 2px rgba($accent-primary, 0.5);
+}
+
+// ========================
+// Custom Arch module
+// ========================
+#custom-arch {
+  margin-left: 5px;
+  padding: 0 10px;
+  transition: color .5s;
+  border-radius: 6px;
+}
+
+#custom-arch:hover {
+  color: $accent-primary;
+}
+
+// ========================
+// Tray styling
+// ========================
+#tray menu {
+  background-color: rgba($background-alt, 0.9);
+  border: 2px solid rgba($accent-primary, 0.4);
+  border-radius: 6px;
+  color: $foreground;
+}
+
+#tray menu *:hover {
+  background-color: rgba($accent-secondary, 1.0);
+  padding: 0 1px 1px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 6px;
+  color: $foreground;
+}

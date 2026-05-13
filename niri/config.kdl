@@ -1,0 +1,32 @@
+// Main niri configuration
+// https://niri-wm.github.io/niri/Configuration:-Introduction
+//
+// Modular layout:
+//   config.kdl   ← you are here (globals + includes)
+//   input.kdl    ← keyboard, touchpad, mouse
+//   outputs.kdl  ← monitor layout and modes
+//   layout.kdl   ← gaps, focus ring, border, shadow
+//   rules.kdl    ← window rules
+//   binds.kdl    ← keybindings
+//   autostart.kdl    ← autostart applications
+
+include "~/.config/niri/input.kdl"
+include "~/.config/niri/outputs.kdl"
+include "~/.config/niri/layout.kdl"
+include "~/.config/niri/rules.kdl"
+include "~/.config/niri/binds.kdl"
+include "~/.config/niri/autostart.kdl"
+
+// ── Global behaviour ──────────────────────────────────────────────────────────
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+hotkey-overlay {
+    // skip-at-startup
+}
+
+animations {
+    // off
+    // slowdown 3.0
+}
+
