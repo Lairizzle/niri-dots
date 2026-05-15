@@ -40,24 +40,24 @@ binds {
     Mod+W       { toggle-column-tabbed-display; }
 
     // ── Focus: DP-1 (arrow keys + hjkl) ──────────────────────────────────────
-    Mod+Left  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-left"; }
-    Mod+Right { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-right"; }
-    Mod+Down  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-down"; }
-    Mod+Up    { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-up"; }
-    Mod+H     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-left"; }
-    Mod+J     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-window-down"; }
-    Mod+K     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-window-up"; }
-    Mod+L     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-right"; }
+    Alt+Left  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-left"; }
+    Alt+Right { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-right"; }
+    Alt+Down  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-down"; }
+    Alt+Up    { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-up"; }
+    Alt+H     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-left"; }
+    Alt+J     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-window-down"; }
+    Alt+K     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-window-up"; }
+    Alt+L     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-1' && niri msg action focus-column-right"; }
 
     // ── Focus: DP-2 (Shift + arrow keys + hjkl) ───────────────────────────────
-    Mod+Shift+Left  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-left"; }
-    Mod+Shift+Right { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-right"; }
-    Mod+Shift+Down  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-down"; }
-    Mod+Shift+Up    { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-up"; }
-    Mod+Shift+H     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-left"; }
-    Mod+Shift+J     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-window-down"; }
-    Mod+Shift+K     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-window-up"; }
-    Mod+Shift+L     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-right"; }
+    Alt+Shift+Left  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-left"; }
+    Alt+Shift+Right { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-right"; }
+    Alt+Shift+Down  { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-down"; }
+    Alt+Shift+Up    { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-up"; }
+    Alt+Shift+H     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-left"; }
+    Alt+Shift+J     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-window-down"; }
+    Alt+Shift+K     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-window-up"; }
+    Alt+Shift+L     { spawn "sh" "-c" "niri msg action focus-monitor 'DP-2' && niri msg action focus-column-right"; }
 
     // ── Move windows ──────────────────────────────────────────────────────────
     Mod+Ctrl+Left  { move-column-left; }

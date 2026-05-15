@@ -96,7 +96,7 @@ mainbox {
     border:           0px;
     padding:          12px 10px 10px 10px;
     spacing:          8px;
-    background-color: transparent;
+    //background-color: transparent;
 }
 
 /*******************************************************************************
@@ -148,7 +148,7 @@ listview {
     spacing:          3px;
     scrollbar:        true;
     padding:          6px 0px 2px;
-    background-color: transparent;
+    //background-color: transparent;
     lines:            8;
 }
 
@@ -159,7 +159,7 @@ element {
     border:           0px;
     border-radius:    0px;
     padding:          6px 10px;
-    background-color: transparent;
+    //background-color: transparent;
 }
 
 element-text {
@@ -225,7 +225,7 @@ message {
     border:           1px 0px 0px 0px;
     border-color:     @separatorcolor;
     padding:          6px 10px;
-    background-color: transparent;
+    //background-color: transparent;
 }
 
 textbox {
@@ -240,14 +240,14 @@ mode-switcher {
     border-color:     @separatorcolor;
     spacing:          4px;
     padding:          6px 4px 4px;
-    background-color: transparent;
+    //background-color: transparent;
 }
 
 button {
     padding:          4px 10px;
     border-radius:    0px;
     text-color:       @fg-linenr;
-    background-color: transparent;
+    //background-color: transparent;
 }
 
 button.selected {
