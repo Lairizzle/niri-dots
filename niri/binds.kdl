@@ -12,7 +12,10 @@ binds {
     Super+Alt+L   hotkey-overlay-title="Lock the Screen: swaylock"    { spawn "swaylock"; }
     Super+Alt+S   allow-when-locked=true hotkey-overlay-title=null    { spawn-sh "pkill orca || exec orca"; }
     Ctrl+Alt+Space hotkey-overlay-title="Niri Config Editor" { spawn "bash" "/home/keith/.config/niri/open-niri-config.sh"; }
-
+    ALT+7 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "com.obsproject.Studio"; }
+    ALT+8 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "discord"; }
+    ALT+9 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "brave-browser"; }
+    ALT+0 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "spotify-launcher"; }
     // ── Audio ─────────────────────────────────────────────────────────────────
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
