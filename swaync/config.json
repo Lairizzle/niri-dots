@@ -22,6 +22,7 @@
     "notification-icon-size": 60,
     "notification-body-image-height": 180,
     "notification-body-image-width": 180,
+    "notification-default-action": "activate",
 
     "timeout": 12,
     "timeout-low": 6,
@@ -37,6 +38,13 @@
     "hide-on-clear": false,
     "hide-on-action": true,
     "script-fail-notify": true,
+    "scripts": {
+        "discord-focus": {
+            "app-name": ".*",
+            "run-on": "action",
+            "exec": "/home/keith/.config/niri/focusapp.sh \"$SWAYNC_APP_NAME\""
+        }
+    },
 
     "widgets": [
         "mpris",
