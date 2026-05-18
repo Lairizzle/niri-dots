@@ -161,6 +161,9 @@ return {
     -- ========================================================================
     -- Define which language servers to install and their configurations
     local servers = {
+      -- C++ Language Server
+      clangd = {},
+
       -- C# Language Server
       csharp_ls = {},
 
@@ -200,6 +203,7 @@ return {
       'stylua', -- Lua formatter
       'black', -- Python formatter
       'csharpier', -- C# formatter
+      'clangd', -- C++ formatter
     })
 
     require('mason-tool-installer').setup {
