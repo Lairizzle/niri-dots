@@ -4,5 +4,5 @@
 spawn-at-startup "waybar"
 spawn-at-startup "discord"
 spawn-at-startup "brave"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/keith/.config/wallpapers/tokyo2.png"
+spawn-at-startup "awww-daemon"
 
