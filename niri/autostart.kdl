@@ -3,6 +3,6 @@
 // ── Startup ───────────────────────────────────────────────────────────────────
 spawn-at-startup "waybar"
 spawn-at-startup "discord"
-spawn-at-startup "brave"
+spawn-at-startup "zen-browser"
 spawn-at-startup "awww-daemon" "--namespace" "DP-1"
 

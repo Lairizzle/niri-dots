@@ -33,6 +33,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="zen"
+    open-on-output "DP-2"
+    opacity 1.0
+}
+
+window-rule {
     match app-id="brave-browser"
     open-on-output "DP-2"
     opacity 1.0
