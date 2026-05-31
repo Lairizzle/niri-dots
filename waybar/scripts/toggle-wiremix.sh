@@ -12,10 +12,3 @@ sleep 0.2
 # ensure we target correct window
 niri msg action focus-window
 
-# size FIRST (prevents layout jump)
-niri msg action set-window-width 600
-niri msg action set-window-height 400
-
-# give layout time to settle
-sleep 0.05
-

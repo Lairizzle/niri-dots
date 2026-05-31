@@ -4,5 +4,5 @@
 spawn-at-startup "waybar"
 spawn-at-startup "discord"
 spawn-at-startup "brave"
-spawn-at-startup "awww-daemon"
+spawn-at-startup "awww-daemon" "--namespace" "DP-1"
 

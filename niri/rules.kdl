@@ -19,8 +19,11 @@ window-rule {
 window-rule {
     match app-id="wiremix"
     open-floating true
-
     default-floating-position x=8 y=8 relative-to="top-right"
+    min-width 600
+    max-width 600
+    min-height 400
+    max-height 400
 }
 
 // Apps that open on DP-2
