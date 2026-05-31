@@ -26,7 +26,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "sh -c 'pgrep -x wiremix && killall wiremix || kitty --class wiremix -e wiremix &'"
+        "on-click": "pgrep -x wiremix && killall wiremix || kitty --class wiremix -e wiremix"
     },
     "network": {
         "format-wifi": "   {essid} ({signalStrength}%)",

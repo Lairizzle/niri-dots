@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 # wallpaper-switcher.sh — pick & apply wallpapers with rofi + image preview
-# Dependencies: rofi, awww (or swww), find, imagemagick (recommended)
+# Dependencies: rofi, awww, find, imagemagick (recommended)
 # Usage: ./wallpaper-switcher.sh [wallpaper_directory]
 
 WALLPAPER_DIR="${1:-$HOME/.config/wallpapers/}"
 CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/wallpaper-switcher"
 PREVIEW_SIZE="800x450"
 EXTENSIONS="jpg|jpeg|png|gif|webp|bmp"
+AWWW_OUTPUT="dp-1"
+
+# ─── Environment ──────────────────────────────────────────────────────────────
+export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-1}"
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+export DISPLAY="${DISPLAY:-:0}"
 
 # ─── Validate wallpaper directory ─────────────────────────────────────────────
-
 if [[ ! -d "$WALLPAPER_DIR" ]]; then
   notify-send -u critical "wallpaper-switcher" \
     "Directory not found: $WALLPAPER_DIR" 2>/dev/null
@@ -17,16 +22,11 @@ if [[ ! -d "$WALLPAPER_DIR" ]]; then
   exit 1
 fi
 
-# ─── Detect wallpaper setter ──────────────────────────────────────────────────
-
-if command -v awww &>/dev/null; then
-  SETTER="awww"
-elif command -v swww &>/dev/null; then
-  SETTER="swww"
-else
+# ─── Validate dependencies ────────────────────────────────────────────────────
+if ! command -v awww &>/dev/null; then
   notify-send -u critical "wallpaper-switcher" \
-    "Neither 'awww' nor 'swww' found in PATH." 2>/dev/null
-  echo "Error: awww / swww not found." >&2
+    "'awww' not found in PATH." 2>/dev/null
+  echo "Error: awww not found." >&2
   exit 1
 fi
 
@@ -41,7 +41,6 @@ HAS_CONVERT=false
 command -v convert &>/dev/null && HAS_CONVERT=true
 
 # ─── Thumbnail cache ──────────────────────────────────────────────────────────
-
 mkdir -p "$CACHE_DIR"
 
 generate_thumbnail() {
@@ -60,7 +59,6 @@ generate_thumbnail() {
 }
 
 # ─── Collect wallpapers ───────────────────────────────────────────────────────
-
 mapfile -d '' WALLPAPERS < <(
   find "$WALLPAPER_DIR" -type f -regextype posix-extended \
     -iregex ".*\.(${EXTENSIONS})" -print0 | sort -z
@@ -73,7 +71,6 @@ if [[ ${#WALLPAPERS[@]} -eq 0 ]]; then
 fi
 
 # ─── Build rofi entries ───────────────────────────────────────────────────────
-
 build_rofi_entries() {
   for wall in "${WALLPAPERS[@]}"; do
     local name thumb
@@ -95,14 +92,12 @@ CHOSEN=$(
     -p "󰸉 Wallpaper" \
     -show-icons \
     -font "JetBrainsMono Nerd Font 10" \
-    -theme-str 'window { width: 500px; height: 700px; } listview { columns: 1; lines: 2; } element { orientation: vertical; } element-icon { size: 250px; } element-text { horizontal-align: 0.5; }' \
-    -format 's'
+    -theme-str 'window { width: 500px; height: 700px; } listview { columns: 1; lines: 2; } element { orientation: vertical; } element-icon { size: 250px; } element-text { horizontal-align: 0.5; }'
 )
 
 [[ -z "$CHOSEN" ]] && exit 0
 
 # ─── Resolve full path ────────────────────────────────────────────────────────
-
 SELECTED=""
 for wall in "${WALLPAPERS[@]}"; do
   if [[ "$(basename "$wall")" == "$CHOSEN" ]]; then
@@ -117,25 +112,19 @@ if [[ -z "$SELECTED" ]]; then
 fi
 
 # ─── Apply wallpaper ──────────────────────────────────────────────────────────
+awww query &>/dev/null || { awww-daemon --namespace "$AWWW_OUTPUT" & sleep 0.5; }
 
-case "$SETTER" in
-  awww)
-    awww img "$SELECTED" --transition-type wipe --transition-duration 1
-    ;;
-  swww)
-    swww query &>/dev/null || swww init
-    swww img "$SELECTED" --transition-type wipe --transition-duration 1
-    ;;
-esac
+awww img "$SELECTED" --namespace "$AWWW_OUTPUT" \
+  --transition-type wipe \
+  --transition-duration 1
 
 STATUS=$?
-
 if [[ $STATUS -eq 0 ]]; then
   notify-send "Wallpaper set" "$(basename "$SELECTED")" -i "$SELECTED" 2>/dev/null
   echo "Wallpaper set: $SELECTED"
 else
   notify-send -u critical "wallpaper-switcher" \
     "Failed to set wallpaper (exit $STATUS)" 2>/dev/null
-  echo "Error: $SETTER exited with status $STATUS" >&2
+  echo "Error: awww exited with status $STATUS" >&2
   exit $STATUS
 fi

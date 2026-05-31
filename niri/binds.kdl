@@ -14,9 +14,10 @@ binds {
     Ctrl+Alt+Space hotkey-overlay-title="Niri Config Editor" { spawn "bash" "/home/keith/.config/niri/open-niri-config.sh"; }
     Ctrl+Alt+W hotkey-overlay-title="Niri Wallpaper Switcher" { spawn "bash" "/home/keith/.config/niri/paperswitch.sh"; }
     ALT+7 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "com.obsproject.Studio"; }
-    ALT+8 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "brave-browser"; }
+    ALT+8 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "zen"; }
     ALT+9 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "discord"; }
     ALT+0 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "spotify-launcher"; }
+    Ctrl+Alt+Slash { spawn "pkill" "-USR1" "waybar"; }
     // ── Audio ─────────────────────────────────────────────────────────────────
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
