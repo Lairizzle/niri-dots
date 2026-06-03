@@ -163,9 +163,10 @@ binds {
     Mod+Period       { expel-window-from-column; }
 
     // ── Screenshots ───────────────────────────────────────────────────────────
-    Print      { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print  { screenshot-window; }
+    Ctrl+Alt+P  { screenshot; }
+    Ctrl+P { screenshot-screen; }
+    Alt+P  { screenshot-window; }
+
 
     // ── Session ───────────────────────────────────────────────────────────────
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
