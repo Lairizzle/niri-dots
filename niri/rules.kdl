@@ -45,6 +45,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="subtui-window"
+    open-on-output "DP-2"
+}
+
+window-rule {
     match app-id="Spotify"
     open-on-output "DP-2"
 }
