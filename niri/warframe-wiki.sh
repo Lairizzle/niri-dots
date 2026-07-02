@@ -6,7 +6,6 @@ BROWSER_CMD="${BROWSER:-xdg-open}"
 
 if command -v rofi >/dev/null 2>&1; then
     query=$(rofi -dmenu -i -p "󰫈 Warframe Wiki" \
-        -font "JetBrainsMono Nerd Font 10" \
         -disable-history)
 elif command -v wofi >/dev/null 2>&1; then
     query=$(wofi --dmenu -i -p "Warframe Wiki")

@@ -91,7 +91,6 @@ CHOSEN=$(
     -i \
     -p "󰸉 Wallpaper" \
     -show-icons \
-    -font "JetBrainsMono Nerd Font 10" \
     -theme-str 'window { width: 500px; height: 700px; } listview { columns: 1; lines: 2; } element { orientation: vertical; } element-icon { size: 250px; } element-text { horizontal-align: 0.5; }'
 )
 

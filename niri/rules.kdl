@@ -45,12 +45,17 @@ window-rule {
 }
 
 window-rule {
+    match app-id="weechat-window"
+    open-on-output "DP-2"
+}
+
+window-rule {
     match app-id="subtui-window"
     open-on-output "DP-2"
 }
 
 window-rule {
-    match app-id="Spotify"
+    match app-id="com.obsproject.Studio"
     open-on-output "DP-2"
 }
 

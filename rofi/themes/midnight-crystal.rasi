@@ -7,6 +7,7 @@
  *******************************************************************************/
 
 * {
+    font: "GohuFont 14 Nerd Font Mono 11";
     /* ── Midnight Crystal Palette ───────────────────────────────────── */
 
     /* Backgrounds (dark maroon → purple progression) */
@@ -116,7 +117,7 @@ inputbar {
 prompt {
     spacing:          0;
     text-color:       @accent-keyword;
-    font:             "Sans Bold 10";
+    font:             "Fira Code Bold 10";
 }
 
 textbox-prompt-colon {

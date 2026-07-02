@@ -33,7 +33,6 @@ if command -v rofi >/dev/null 2>&1; then
         -dmenu \
         -i \
         -p "󱂬 Niri Config" \
-        -font "JetBrainsMono Nerd Font 10" \
         -sort \
         -disable-history)
 elif command -v wofi >/dev/null 2>&1; then
