@@ -220,7 +220,7 @@ trough highlight {
    ============================================================================ */
 label {
     color: @text;
-    font-family: "GohuFont 14 Nerd Font Mono";
+    font-family: "GohuFont uni14 Nerd Font Mono";
     font-size: 14px;
 }
 
