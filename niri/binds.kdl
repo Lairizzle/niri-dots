@@ -13,10 +13,11 @@ binds {
     Super+Alt+S   allow-when-locked=true hotkey-overlay-title=null    { spawn-sh "pkill orca || exec orca"; }
     Ctrl+Alt+Space hotkey-overlay-title="Niri Config Editor" { spawn "bash" "/home/keith/.config/niri/open-niri-config.sh"; }
     Ctrl+Alt+K hotkey-overlay-title="Niri Config Editor" { spawn "bash" "/home/keith/.config/niri/warframe-wiki.sh"; }
+    Ctrl+Alt+M hotkey-overlay-title="Niri Config Editor" { spawn "bash" "/home/keith/.config/niri/warframe-market.sh"; }
     Ctrl+Alt+W hotkey-overlay-title="Niri Wallpaper Switcher" { spawn "bash" "/home/keith/.config/niri/paperswitch.sh"; }
     ALT+7 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "com.obsproject.Studio"; }
     ALT+8 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "zen"; }
-    ALT+9 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "discord"; }
+    ALT+9 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "vesktop"; }
     ALT+0 { spawn "bash" "/home/keith/.config/niri/focusapp.sh" "subtui-window"; }
     Ctrl+Alt+Slash { spawn "pkill" "-USR1" "waybar"; }
     // ── Audio ─────────────────────────────────────────────────────────────────

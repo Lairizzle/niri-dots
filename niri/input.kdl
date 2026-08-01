@@ -41,7 +41,6 @@ input {
         // scroll-button-lock
         // middle-emulation
     }
-
-    // warp-mouse-to-focus
+    warp-mouse-to-focus
     focus-follows-mouse max-scroll-amount="0%"
 }

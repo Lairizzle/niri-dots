@@ -33,6 +33,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
         layout_config = { prompt_position = 'top' },
         sorting_strategy = 'ascending',
         winblend = 0,
+        -- ADDED: Safely filters out all files ending with '.uid' using a Lua regex pattern
+        file_ignore_patterns = { '%.uid$' },
       },
       -- pickers = {}
       extensions = {
